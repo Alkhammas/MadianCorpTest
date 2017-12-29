@@ -9,4 +9,8 @@ loginApp.controller('loginCtrl',['$scope','$http',($scope,$http) => {
             $scope.errorMessage = e.data.message;
         });
     }
+    
+    $scope.logout = function() {
+        $scope.user = null;
+    }
 }]);
