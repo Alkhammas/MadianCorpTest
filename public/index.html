@@ -35,16 +35,23 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
+                        <li class="nav-item dropdown" ng-show="user">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Settings
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item mr-sm-2" href="#" ng-click="logout()" >Sign out</a>
+                                <a class="dropdown-item" href="#" ng-click="newPasswordMode = true" ng-hide="newPasswordMode">Change Password</a>
+                                <div class="dropdown-item" ng-show="newPasswordMode">
+                                    <label class="dropdown-item" for="newPassword">New Password</label>
+                                    <input class="dropdown-item" type="password" id="newPassword" ng-model="newPassword" placeholder="New Password">
+                                    <button class="btn">Change</button>
+                                </div>
+                            </div>
+                        </li>
                         <li class="nav-item mr-sm-2" ng-show="user">
-                            <a class="nav-link mr-sm-2" href="#" ng-click="logout()" >Sign out</a>
                         </li>
                         <li class="nav-item" ng-show="user">
-                            <a class="nav-link" href="#" ng-click="newPasswordMode = true" ng-hide="newPasswordMode">Change Password</a>
-                            <div class="nav-link" ng-show="newPasswordMode">
-                                <label class="nav-link" for="newPassword">New Password</label>
-                                <input class="nav-link" type="password" id="newPassword" ng-model="newPassword" placeholder="New Password">
-                                <button class="nav-link">Change</button>
-                            </div>
                         </li>
                     </ul>
                 </div>
