@@ -13,4 +13,8 @@ loginApp.controller('loginCtrl',['$scope','$http',($scope,$http) => {
     $scope.logout = function() {
         $scope.user = null;
     }
+    
+    $scope.changePassword = function(password) {
+        console.log(password);
+    }
 }]);
